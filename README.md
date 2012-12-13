@@ -28,8 +28,6 @@ And all for less than 1KB, with no dependencies. Delicious.
 
 #### Node.js
 
-(This won't be a lie very soon)
-
 Install with: `npm install allthethings`
 
 ```javascript
