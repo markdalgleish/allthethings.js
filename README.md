@@ -54,19 +54,9 @@ var multiplesOfThree = triple.allThe(numbers); // [3,6,9]
 
 ## filter
 
-If your named function starts with 'filter' or is', then a filter is performed.
+If your named function starts with 'filter' or 'is', then a filter is performed.
 
 When filtering, it's idiomatic to use 'fromThe' instead of 'allThe':
-
-```js
-var numbers = [-2,-1,0,1,2];
-
-function isPositive(number) {
-	return number > 0;
-}
-
-isPositive.fromThe(numbers); // [1,2]
-```
 
 ```js
 var numbers = [-2,-1,0,1,2];
@@ -76,6 +66,16 @@ function filterNegatives(number) {
 }
 
 filterNegatives.fromThe(numbers); // [0,1,2]
+```
+
+```js
+var numbers = [-2,-1,0,1,2];
+
+function isPositive(number) {
+	return number > 0;
+}
+
+isPositive.fromThe(numbers); // [1,2]
 ```
 
 ## reduce
