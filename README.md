@@ -34,10 +34,10 @@ By default, 'allThe' performs a 'map' on the array, which doubles as a 'forEach'
 var words = ['all', 'the', 'things'];
 
 function shout(word) {
-	return word.toUpperCase();
+	return alert(word);
 }
 
-shout.allThe(words); // ['ALL', 'THE', 'THINGS']
+shout.allThe(words);
 ```
 
 ### map
@@ -49,7 +49,7 @@ function triple(number) {
 	return number * 3;
 }
 
-var multiplesOfThree = triple.allThe(numbers);
+var multiplesOfThree = triple.allThe(numbers); // [3,6,9]
 ```
 
 ## filter
@@ -116,7 +116,7 @@ function addTotal(a, b) {
 var total = addTotal.fromThe(numbers); // 6
 ```
 
-## Getting Started
+## Setup
 
 ### On the server
 
