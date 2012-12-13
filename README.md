@@ -2,9 +2,9 @@
 
 # ALLTHETHINGS.JS
 
-### Do something to all the things
+![ALLTHETHINGS.JS](https://raw.github.com/markdalgleish/allthethings.js/master/img/logo.png)
 
-Let your iterations read like actual sentences:
+### Let your iterations read like actual sentences:
 
 ``` js
 doSomethingTo.allThe(things);
