@@ -24,6 +24,25 @@ var proHackers = filterNoobs.fromThe(hackers);
 
 And all for less than 1KB, with no dependencies. Delicious.
 
+### Gimme gimme
+
+#### Node.js
+
+(This won't be a lie very soon)
+
+Install with: `npm install allthethings`
+
+```javascript
+require('allthethings');
+```
+
+#### Browser
+
+Download the [production version][min] or the [development version][max].
+
+[min]: https://raw.github.com/markdalgleish/allthethings/master/dist/allthethings.min.js
+[max]: https://raw.github.com/markdalgleish/allthethings/master/dist/allthethings.js
+
 ## forEach / map
 
 By default, 'allThe' performs a 'map' on the array, which doubles as a 'forEach':
@@ -115,23 +134,6 @@ function addTotal(a, b) {
 
 var total = addTotal.fromThe(numbers); // 6
 ```
-
-## Setup
-
-### On the server
-
-Install the module with: `npm install allthethings`
-
-```javascript
-require('allthethings');
-```
-
-### In the browser
-
-Download the [production version][min] or the [development version][max].
-
-[min]: https://raw.github.com/markdalgleish/allthethings/master/dist/allthethings.min.js
-[max]: https://raw.github.com/markdalgleish/allthethings/master/dist/allthethings.js
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com/).
