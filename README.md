@@ -105,15 +105,15 @@ function calculateTotal(a, b) {
 	return a + b;
 }
 
+var total = calculateTotal.fromThe(numbers); // 6
+```
+
 ```js
 function addTotal(a, b) {
 	return a + b;
 }
 
 var total = addTotal.fromThe(numbers); // 6
-```
-
-var total = calculateTotal.fromThe(numbers); // 6
 ```
 
 ## Getting Started
