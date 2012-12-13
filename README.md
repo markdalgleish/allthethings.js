@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/markdalgleish/allthethings.js.png)](http://travis-ci.org/markdalgleish/allthethings.js)
+
 # ALLTHETHINGS.JS
 
 ### Do something to all the things
