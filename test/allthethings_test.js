@@ -1,5 +1,5 @@
 /*global require:true */
-require('../lib/allthethings.js');
+var allthethings = require('../lib/allthethings.js');
 
 exports['ALL THE THINGS'] = {
 	'forEach': function(test) {
@@ -61,6 +61,19 @@ exports['ALL THE THINGS'] = {
 		test.equal(reduceTotal.fromThe(numbers), 6);
 		test.equal(calculateTotal.fromThe(numbers), 6);
 		test.equal(addTotal.fromThe(numbers), 6);
+		test.done();
+	},
+
+	'custom rules': function(test) {
+		allthethings.rules.filter = /foobar/;
+
+		var numbers = [1,2,3,4];
+
+		function foobar(number) {
+			return number % 2 === 0;
+		}
+
+		test.deepEqual(foobar.fromThe(numbers), [2,4]);
 		test.done();
 	}
 };

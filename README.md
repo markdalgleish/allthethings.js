@@ -151,6 +151,37 @@ var myAliasedFunction = function filter(thing) {
 myAliasedFunction.allThe(things); // [true]
 ```
 
+### Customised rules
+
+You can create new rules or override existing ones:
+
+#### In Node.js
+
+``` js
+var allthethings = require('allthethings');
+
+allthethings.rules.filter = /foobar/;
+```
+
+#### In the browser
+
+``` js
+window.allthethings.rules.filter = /foobar/;
+```
+
+#### Which allows:
+
+``` js
+var numbers = [1,2,3,4];
+
+function foobar(number) {
+	return number % 2 === 0;
+}
+
+foobar.allThe(numbers); // [2,4]
+```
+
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com/).
 
