@@ -151,7 +151,7 @@ var myAliasedFunction = function filter(thing) {
 myAliasedFunction.allThe(things); // [true]
 ```
 
-### Customised rules
+### Custom function name rules
 
 You can create new rules or override existing ones:
 
@@ -178,6 +178,7 @@ function foobar(number) {
 	return number % 2 === 0;
 }
 
+// This now performs a filter:
 foobar.allThe(numbers); // [2,4]
 ```
 
