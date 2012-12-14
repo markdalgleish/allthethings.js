@@ -135,6 +135,22 @@ function addTotal(a, b) {
 var total = addTotal.fromThe(numbers); // 6
 ```
 
+## Elite hacker tips
+
+### Aliased functions
+
+Assign a named function expression to a variable of a different name:
+
+``` js
+var things = [false, true, false];
+
+var myAliasedFunction = function filter(thing) {
+	return thing === true;
+};
+
+myAliasedFunction.allThe(things); // [true]
+```
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com/).
 
