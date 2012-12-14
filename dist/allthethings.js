@@ -1,12 +1,27 @@
-/*! allthethings v0.0.1-alpha
+/*! allthethings v0.0.1-alpha-2
  *  https://github.com/markdalgleish/allthethings.js
  *  Copyright (c) 2012 Mark Dalgleish; Licensed MIT */
 
 (function(exports) {
 
-	exports.allTheThings = Function.prototype.allThe = Function.prototype.fromThe = function(things) {
-			this._allTheThings_func = this._allTheThings_func || (/^(reduce|add|calculate)/).test(this.name) ? things.reduce : (/^(filter|is)/).test(this.name) ? things.filter : things.map;
-			return this._allTheThings_func.call(things, this);
+	var rules = {
+			reduce: /^(reduce|add|calculate)/,
+			filter: /^(filter|is)/
+		},
+
+		resolveFunc = function(caller, things) {
+			var cachedFuncKey = '_allthethings_func';
+			return caller[cachedFuncKey] || (caller[cachedFuncKey] =
+				things[Object.keys(rules).reduce(function(prevKey, key) {
+					return rules[key].test(caller.name) ? key : prevKey;
+				}, 'map')]
+			);
+		};
+
+	Function.prototype.allThe = Function.prototype.fromThe = function(things) {
+		return resolveFunc(this, things).call(things, this);
 	};
 
-}(typeof exports === 'object' && exports || this));
+	exports.rules = rules;
+
+}(typeof exports === 'object' && exports || (this.allthethings = {})));
