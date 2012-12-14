@@ -22,7 +22,9 @@ For no extra cost, you also get 'fromThe':
 var proHackers = filterNoobs.fromThe(hackers);
 ```
 
-And all for less than 1KB, with no dependencies. Delicious.
+And all for less than 1KB, with no dependencies*. Delicious.
+
+*Unless your browser is an antique. Then you need [es5-shim](https://github.com/kriskowal/es5-shim).
 
 ### Gimme gimme
 
