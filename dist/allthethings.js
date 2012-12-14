@@ -1,4 +1,4 @@
-/*! allthethings v0.0.1-alpha-2
+/*! allthethings v0.0.1-alpha-3
  *  https://github.com/markdalgleish/allthethings.js
  *  Copyright (c) 2012 Mark Dalgleish; Licensed MIT */
 
