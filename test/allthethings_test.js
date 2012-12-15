@@ -64,6 +64,27 @@ exports['ALL THE THINGS'] = {
 		test.done();
 	},
 
+	'reduceRight': function(test) {
+		var numbers = [1,2,3];
+
+		function reduceRightTest(a, b) {
+			return b;
+		}
+
+		function calculateRightTest(a, b) {
+			return b;
+		}
+
+		function addRightTest(a, b) {
+			return b;
+		}
+
+		test.equal(reduceRightTest.fromThe(numbers), 1);
+		test.equal(calculateRightTest.fromThe(numbers), 1);
+		test.equal(addRightTest.fromThe(numbers), 1);
+		test.done();
+	},
+
 	'some': function(test) {
 		var numbers = [-1,0,1],
 			positiveNumbers = [1,2,3];

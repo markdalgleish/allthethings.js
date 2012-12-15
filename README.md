@@ -35,7 +35,8 @@ ALLTHETHINGS.JS allows you to *sentencify* the following array methods:
  - [forEach](#foreach--map)
  - [map](#foreach--map)
  - [filter](#filter)
- - [reduce](#reduce)
+ - [reduce](#reduce--reduceright)
+ - [reduceRight](#reduce--reduceright)
  - [some](#some)
  - [every](#every)
 
@@ -110,9 +111,11 @@ function isPositive(number) {
 isPositive.fromThe(numbers); // [1,2]
 ```
 
-## reduce
+## reduce / reduceRight
 
 If your named function starts with 'reduce', 'calculate' or 'add', then a [*reduce*](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/Reduce) is performed.
+
+If you add 'Right' to any of these, then a [*reduceRight*](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/ReduceRight) is performed instead.
 
 When reducing, it's idiomatic to use 'fromThe' instead of 'allThe':
 
