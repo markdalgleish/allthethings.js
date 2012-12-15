@@ -76,11 +76,39 @@ exports['ALL THE THINGS'] = {
 			return number < 0;
 		}
 
+		function hasNegatives(number) {
+			return number < 0;
+		}
+
 		test.strictEqual(someNegatives.inThe(numbers), true);
 		test.strictEqual(someNegatives.inThe(positiveNumbers), false);
 
 		test.strictEqual(containsNegatives.inThe(numbers), true);
 		test.strictEqual(containsNegatives.inThe(positiveNumbers), false);
+
+		test.strictEqual(hasNegatives.inThe(numbers), true);
+		test.strictEqual(hasNegatives.inThe(positiveNumbers), false);
+
+		test.done();
+	},
+
+	'every': function(test) {
+		var numbers = [-1,0,1],
+			negativeNumbers = [-1,-2,-3];
+
+		function everyNumberIsNegative(number) {
+			return number < 0;
+		}
+
+		function allNegatives(number) {
+			return number < 0;
+		}
+
+		test.strictEqual(everyNumberIsNegative.inThe(negativeNumbers), true);
+		test.strictEqual(everyNumberIsNegative.inThe(numbers), false);
+
+		test.strictEqual(allNegatives.inThe(negativeNumbers), true);
+		test.strictEqual(allNegatives.inThe(numbers), false);
 		
 		test.done();
 	},

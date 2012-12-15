@@ -1,4 +1,4 @@
-/*! allthethings v0.0.1-alpha-4
+/*! allthethings v0.0.1-alpha-5
  *  https://github.com/markdalgleish/allthethings.js
  *  Copyright (c) 2012 Mark Dalgleish; Licensed MIT */
 
@@ -7,7 +7,8 @@
 	var rules = {
 			reduce: /^(reduce|add|calculate)/,
 			filter: /^(filter|is)/,
-			some: /^(some|contains)/
+			some: /^(some|contains|has)/,
+			every: /^(every|all)/
 		},
 
 		resolveFunc = function(caller, things) {

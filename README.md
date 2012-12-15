@@ -141,7 +141,7 @@ var total = addTotal.fromThe(numbers); // 6
 
 ## some
 
-If your named function starts with 'some' or 'contains', then a 'some' is performed.
+If your named function starts with 'some', 'contains' or 'has', then a 'some' is performed.
 
 When using 'some', it's idiomatic to use 'inThe' instead of 'allThe':
 
@@ -163,6 +163,42 @@ function containsNegatives(number) {
 }
 
 containsNegatives.inThe(numbers); // true
+```
+
+```js
+var numbers = [-2,-1,0,1,2];
+
+function hasNegatives(number) {
+	return number < 0;
+}
+
+hasNegatives.inThe(numbers); // true
+```
+
+## every
+
+If your named function starts with 'every' or 'all', then an 'every' is performed.
+
+When using 'every', it's idiomatic to use 'inThe' instead of 'allThe':
+
+```js
+var numbers = [1,2,3,4,5];
+
+function everyNumberIsPositive(number) {
+	return number > 0;
+}
+
+everyNumberIsPositive.inThe(numbers); // true
+```
+
+```js
+var numbers = [1,2,3,4,5];
+
+function allPositive(number) {
+	return number > 0;
+}
+
+allPositive.inThe(numbers); // true
 ```
 
 ## Elite hacker tips
