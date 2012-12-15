@@ -4,7 +4,7 @@
 
 ![ALLTHETHINGS.JS](https://raw.github.com/markdalgleish/allthethings.js/master/img/logo.png)
 
-### Let your iterations read like actual sentences:
+### Let your array iterations read like actual sentences:
 
 ``` js
 var things = ['all', 'the', 'things'];
