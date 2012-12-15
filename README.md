@@ -54,13 +54,13 @@ By default, 'allThe' performs a 'map' on the array, which doubles as a 'forEach'
 ### forEach
 
 ```js
-var words = ['all', 'the', 'things'];
+var things = ['all', 'the', 'things'];
 
-function shout(word) {
-	return alert(word);
+function log(thing) {
+	console.log(thing);
 }
 
-shout.allThe(words);
+log.allThe(things);
 ```
 
 ### map
@@ -77,7 +77,7 @@ var multiplesOfThree = triple.allThe(numbers); // [3,6,9]
 
 ## filter
 
-If your named function starts with 'filter' or 'is', then a filter is performed.
+If your named function starts with 'filter' or 'is', then a 'filter' is performed.
 
 When filtering, it's idiomatic to use 'fromThe' instead of 'allThe':
 
@@ -103,7 +103,7 @@ isPositive.fromThe(numbers); // [1,2]
 
 ## reduce
 
-If your named function starts with 'reduce', 'calculate' or 'add', then a reduce is performed.
+If your named function starts with 'reduce', 'calculate' or 'add', then a 'reduce' is performed.
 
 When reducing, it's idiomatic to use 'fromThe' instead of 'allThe':
 
