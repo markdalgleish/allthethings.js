@@ -44,10 +44,10 @@ ALLTHETHINGS.JS allows you to *sentencify* the following array methods:
 
 #### Node.js
 
-Install with: `npm install ALLTHETHINGS`
+Install with: `npm install allthethings`
 
 ```javascript
-require('ALLTHETHINGS');
+require('allthethings');
 ```
 
 #### Browser
@@ -236,15 +236,15 @@ You can create new rules or override existing ones:
 #### In Node.js
 
 ``` js
-var ALLTHETHINGS = require('ALLTHETHINGS');
+var allthethings = require('allthethings');
 
-ALLTHETHINGS.rules.filter = /foobar/;
+allthethings.rules.filter = /foobar/;
 ```
 
 #### In the browser
 
 ``` js
-window.ALLTHETHINGS.rules.filter = /foobar/;
+window.allthethings.rules.filter = /foobar/;
 ```
 
 #### Which allows:

@@ -1,5 +1,5 @@
 /*global require:true */
-var ALLTHETHINGS = require('../lib/allthethings.js');
+var allthethings = require('../lib/allthethings.js');
 
 exports['ALL THE THINGS'] = {
 	'forEach': function(test) {
@@ -135,7 +135,7 @@ exports['ALL THE THINGS'] = {
 	},
 
 	'custom rules': function(test) {
-		ALLTHETHINGS.rules.filter = /foobar/;
+		allthethings.rules.filter = /foobar/;
 
 		var numbers = [1,2,3,4];
 
