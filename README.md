@@ -7,19 +7,23 @@
 ### Let your iterations read like actual sentences:
 
 ``` js
-doSomethingTo.allThe(things);
+var things = ['all', 'the', 'things'];
+
+function log(thing) {
+	console.log(thing);
+}
+
+log.allThe(things);
 ```
 
-Instead of coding like Yoda...
-
-``` js
-things.forEach(doSomething);
-```
-
-For no extra cost, you also get 'fromThe':
+For no extra cost, you also get the 'fromThe' and 'inThe' aliases, for your grammatical needs:
 
 ``` js
 var proHackers = filterNoobs.fromThe(hackers);
+```
+
+``` js
+containsProHackers.inThe(hackers); // true
 ```
 
 And all for less than 1KB, with no dependencies*. Delicious.
@@ -135,6 +139,32 @@ function addTotal(a, b) {
 var total = addTotal.fromThe(numbers); // 6
 ```
 
+## some
+
+If your named function starts with 'some' or 'contains', then a 'some' is performed.
+
+When using 'some', it's idiomatic to use 'inThe' instead of 'allThe':
+
+```js
+var numbers = [-2,-1,0,1,2];
+
+function someNegatives(number) {
+	return number < 0;
+}
+
+someNegatives.inThe(numbers); // true
+```
+
+```js
+var numbers = [-2,-1,0,1,2];
+
+function containsNegatives(number) {
+	return number < 0;
+}
+
+containsNegatives.inThe(numbers); // true
+```
+
 ## Elite hacker tips
 
 ### Aliased functions
@@ -181,7 +211,6 @@ function foobar(number) {
 // This now performs a filter:
 foobar.allThe(numbers); // [2,4]
 ```
-
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com/).

@@ -1,4 +1,4 @@
-/*! allthethings v0.0.1-alpha-3
+/*! allthethings v0.0.1-alpha-4
  *  https://github.com/markdalgleish/allthethings.js
  *  Copyright (c) 2012 Mark Dalgleish; Licensed MIT */
 
@@ -6,7 +6,8 @@
 
 	var rules = {
 			reduce: /^(reduce|add|calculate)/,
-			filter: /^(filter|is)/
+			filter: /^(filter|is)/,
+			some: /^(some|contains)/
 		},
 
 		resolveFunc = function(caller, things) {
@@ -16,11 +17,15 @@
 					return rules[key].test(caller.name) ? key : prevKey;
 				}, 'map')]
 			);
+		},
+
+		allthethings = function(things) {
+			return resolveFunc(this, things).call(things, this);
 		};
 
-	Function.prototype.allThe = Function.prototype.fromThe = function(things) {
-		return resolveFunc(this, things).call(things, this);
-	};
+	['allThe', 'fromThe', 'inThe'].forEach(function(alias) {
+		Function.prototype[alias] = allthethings;
+	});
 
 	exports.rules = rules;
 

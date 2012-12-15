@@ -64,6 +64,27 @@ exports['ALL THE THINGS'] = {
 		test.done();
 	},
 
+	'some': function(test) {
+		var numbers = [-1,0,1],
+			positiveNumbers = [1,2,3];
+
+		function someNegatives(number) {
+			return number < 0;
+		}
+
+		function containsNegatives(number) {
+			return number < 0;
+		}
+
+		test.strictEqual(someNegatives.inThe(numbers), true);
+		test.strictEqual(someNegatives.inThe(positiveNumbers), false);
+
+		test.strictEqual(containsNegatives.inThe(numbers), true);
+		test.strictEqual(containsNegatives.inThe(positiveNumbers), false);
+		
+		test.done();
+	},
+
 	'custom rules': function(test) {
 		allthethings.rules.filter = /foobar/;
 
