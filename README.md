@@ -53,8 +53,8 @@ require('allthethings');
 
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/markdalgleish/allthethings/master/dist/allthethings.min.js
-[max]: https://raw.github.com/markdalgleish/allthethings/master/dist/allthethings.js
+[min]: https://raw.github.com/markdalgleish/allthethings.js/master/dist/allthethings.min.js
+[max]: https://raw.github.com/markdalgleish/allthethings.js/master/dist/allthethings.js
 
 ## forEach / map
 
