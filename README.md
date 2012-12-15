@@ -49,7 +49,7 @@ Download the [production version][min] or the [development version][max].
 
 ## forEach / map
 
-By default, 'allThe' performs a 'map' on the array, which doubles as a 'forEach':
+By default, 'allThe' performs a [*map*](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/map) on the array, which doubles as a [*forEach*](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach):
 
 ### forEach
 
@@ -77,7 +77,7 @@ var multiplesOfThree = triple.allThe(numbers); // [3,6,9]
 
 ## filter
 
-If your named function starts with 'filter' or 'is', then a 'filter' is performed.
+If your named function starts with 'filter' or 'is', then a [*filter*](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/filter) is performed.
 
 When filtering, it's idiomatic to use 'fromThe' instead of 'allThe':
 
@@ -103,7 +103,7 @@ isPositive.fromThe(numbers); // [1,2]
 
 ## reduce
 
-If your named function starts with 'reduce', 'calculate' or 'add', then a 'reduce' is performed.
+If your named function starts with 'reduce', 'calculate' or 'add', then a [*reduce*](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/Reduce) is performed.
 
 When reducing, it's idiomatic to use 'fromThe' instead of 'allThe':
 
@@ -141,7 +141,7 @@ var total = addTotal.fromThe(numbers); // 6
 
 ## some
 
-If your named function starts with 'some', 'contains' or 'has', then a 'some' is performed.
+If your named function starts with 'some', 'contains' or 'has', then a [*some*](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/some) is performed.
 
 When using 'some', it's idiomatic to use 'inThe' instead of 'allThe':
 
@@ -177,7 +177,7 @@ hasNegatives.inThe(numbers); // true
 
 ## every
 
-If your named function starts with 'every' or 'all', then an 'every' is performed.
+If your named function starts with 'every' or 'all', then an [*every*](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/every) is performed.
 
 When using 'every', it's idiomatic to use 'inThe' instead of 'allThe':
 
