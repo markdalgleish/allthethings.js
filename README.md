@@ -30,6 +30,15 @@ And all for less than 1KB, with no dependencies*. Delicious.
 
 *Unless your browser is an antique. Then you need [es5-shim](https://github.com/kriskowal/es5-shim).
 
+ALLTHETHINGS.JS allows you to *sentencify* the following array methods:
+
+ - [forEach](#foreach--map)
+ - [map](#foreach--map)
+ - [filter](#filter)
+ - [reduce](#reduce)
+ - [some](#some)
+ - [every](#every)
+
 ### Gimme gimme
 
 #### Node.js
