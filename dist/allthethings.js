@@ -1,12 +1,13 @@
-/*! allthethings v0.0.1-alpha-5
+/*! allthethings v0.0.1-alpha-6
  *  https://github.com/markdalgleish/allthethings.js
  *  Copyright (c) 2012 Mark Dalgleish; Licensed MIT */
 
 (function(exports) {
 
 	var rules = {
-			reduce: /^(reduce|add|calculate)/,
 			filter: /^(filter|is)/,
+			reduce: /^(reduce|add|calculate)/,
+			reduceRight: /^(reduce|add|calculate)Right/,
 			some: /^(some|contains|has)/,
 			every: /^(every|all)/
 		},
