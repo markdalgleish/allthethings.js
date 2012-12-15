@@ -1,4 +1,4 @@
-/*! allthethings v0.0.1-alpha-6
+/*! allthethings v0.0.1-alpha-7
  *  https://github.com/markdalgleish/allthethings.js
  *  Copyright (c) 2012 Mark Dalgleish; Licensed MIT */
 
@@ -31,4 +31,4 @@
 
 	exports.rules = rules;
 
-}(typeof exports === 'object' && exports || (this.allthethings = {})));
+}(typeof exports === 'object' && exports || (this.ALLTHETHINGS = {})));
