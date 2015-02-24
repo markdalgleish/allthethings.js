@@ -4,7 +4,7 @@ var allthethings = require('../lib/allthethings.js');
 exports['ALL THE THINGS'] = {
 	'forEach': function(test) {
 		var total = 0,
-			numbers = [1,2,3];
+			numbers = [1, 2, 3];
 
 		function incrementTotalWith(number) {
 			total += number;
@@ -17,18 +17,18 @@ exports['ALL THE THINGS'] = {
 	},
 
 	'map': function(test) {
-		var numbers = [1,2,3];
+		var numbers = [1, 2, 3];
 
-		function double (number) {
+		function double(number) {
 			return number * 2;
 		}
 
-		test.deepEqual(double.allThe(numbers), [2,4,6]);
+		test.deepEqual(double.allThe(numbers), [2, 4, 6]);
 		test.done();
 	},
 
 	'filter': function(test) {
-		var numbers = [1,2,3,4];
+		var numbers = [1, 2, 3, 4];
 
 		function filterOddNumbers(number) {
 			return number % 2 === 0;
@@ -38,13 +38,13 @@ exports['ALL THE THINGS'] = {
 			return number % 2 === 0;
 		}
 
-		test.deepEqual(filterOddNumbers.fromThe(numbers), [2,4]);
-		test.deepEqual(isEven.fromThe(numbers), [2,4]);
+		test.deepEqual(filterOddNumbers.fromThe(numbers), [2, 4]);
+		test.deepEqual(isEven.fromThe(numbers), [2, 4]);
 		test.done();
 	},
 
 	'reduce': function(test) {
-		var numbers = [1,2,3];
+		var numbers = [1, 2, 3];
 
 		function reduceTotal(a, b) {
 			return a + b;
@@ -65,7 +65,7 @@ exports['ALL THE THINGS'] = {
 	},
 
 	'reduceRight': function(test) {
-		var numbers = [1,2,3];
+		var numbers = [1, 2, 3];
 
 		function reduceRightTest(a, b) {
 			return b;
@@ -86,8 +86,8 @@ exports['ALL THE THINGS'] = {
 	},
 
 	'some': function(test) {
-		var numbers = [-1,0,1],
-			positiveNumbers = [1,2,3];
+		var numbers = [-1, 0, 1],
+			positiveNumbers = [1, 2, 3];
 
 		function someNegatives(number) {
 			return number < 0;
@@ -114,8 +114,8 @@ exports['ALL THE THINGS'] = {
 	},
 
 	'every': function(test) {
-		var numbers = [-1,0,1],
-			negativeNumbers = [-1,-2,-3];
+		var numbers = [-1, 0, 1],
+			negativeNumbers = [-1, -2, -3];
 
 		function everyNumberIsNegative(number) {
 			return number < 0;
@@ -130,20 +130,43 @@ exports['ALL THE THINGS'] = {
 
 		test.strictEqual(allNegatives.inThe(negativeNumbers), true);
 		test.strictEqual(allNegatives.inThe(numbers), false);
-		
+
 		test.done();
 	},
 
 	'custom rules': function(test) {
+		var temp = allthethings.rules.filter,  numbers = [1, 2, 3, 4];
 		allthethings.rules.filter = /foobar/;
-
-		var numbers = [1,2,3,4];
 
 		function foobar(number) {
 			return number % 2 === 0;
 		}
 
-		test.deepEqual(foobar.fromThe(numbers), [2,4]);
+		test.deepEqual(foobar.fromThe(numbers), [2, 4]);
+
+		allthethings.rules.filter = temp;
+
+		test.done();
+	},
+
+	're-cache mechanism': function(test) {
+		function foobarFunc(number) {
+			return number % 2 === 0;
+		}
+
+		var numbers = [1, 2, 3, 4], temp;
+
+		test.deepEqual(foobarFunc.fromThe(numbers), [false, true, false, true]);
+
+		temp = allthethings.rules.filter;
+		allthethings.rules.filter = /foobar/;
+
+		test.deepEqual(foobarFunc.fromThe(numbers), [2, 4]);
+
+		allthethings.rules.filter = temp;
+
+		test.deepEqual(foobarFunc.fromThe(numbers), [false, true, false, true]);
+		
 		test.done();
 	}
 };
